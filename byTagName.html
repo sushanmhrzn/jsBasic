@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>This is the Example of getElementByTagName</h1>
+        <div id="hello">
+            <p>This is first line</p>
+            <p>This is second line</p>
+            <p>This is third line</p>
+        <p id="demo"></p>
+        </div>
+        <script>
+            const x=document.getElementById("hello");
+            const y=x.getElementsByTagName("p");
+            document.getElementById("demo").innerHTML="This first index of p tag contains="+y[0].innerHTML+" This second index of p tag contains="+y[1].innerHTML+" This third index of p tag contains="+y[2].innerHTML;
+        </script>
+    </body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<div id="main">
+<p>Finding HTML Elements by Tag Name</p>
+<p>This example demonstrates the method.</p>
+</div>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) inside "main" is: ' + y[].innerHTML;
+
+</script>
+
+</body>
+</html> -->

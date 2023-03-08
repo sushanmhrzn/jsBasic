@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        First name:<input name="firstName" type="text" value="HelloWorld">
+        <p id="demo">
+        </p>
+        <script>
+            const element=document.getElementsByName("firstName");
+            document.getElementById("demo").innerHTML='The name firstname contains value and the type is: '+element[0].tagName+" and "+element[0].value;
+        </script>
+    </body>
+</html>

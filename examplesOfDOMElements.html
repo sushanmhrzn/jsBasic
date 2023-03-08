@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript HTML DOM</h1>
+        <p id="introduction">This is the first DOM element using getElementBy id</p>
+        <p id="demo"></p>
+        <script>
+            const element=document.getElementById("introduction");
+            document.getElementById("demo").innerHTML="The text from the introduction paragrah is=="+element.innerHTML;
+        </script>
+    </body>
+</html>

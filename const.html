@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script>
+            //Const is also a blocked scoped it cant neither be updated or redefined
+            const value=1000;
+            console.log(value);
+
+            //we can update the value of the object type of const
+            const data={
+                "name":"John",
+                "age":25,
+                "phonenumber":8901231
+            }
+            console.log(data.age, data.name, data.phonenumber);
+            data.age=50;
+            data.name="hitori";
+            data.phonenumber=100000;
+            console.log(data.age, data.name, data.phonenumber);
+
+        </script>
+    </body>
+</html>

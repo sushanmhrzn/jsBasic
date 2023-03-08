@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <script>
+            // globally scoped or function/locally scoped
+            var a=100;
+            function display(){
+                console.log("The value of a="+a);
+            }
+            display();
+            //updated or can be redeclared
+            a=500;
+            display();
+            var a=120;
+            display();
+            //hoisiting example hoisting is meachanism of Javascript where variables and function declartions 
+            //are moved to the top of thier scope before code executes
+
+            console.log("The b contains "+   b);
+            var b="This is example of hositing";//the result of printing b shows undefined
+            //This is intrepreted as 
+            /*
+            var b;
+            console.log(b);
+            b="This is example of hoisting";
+            */
+
+
+            //Problem with var
+            var hello="Hii my name is john";
+            if(true){
+                var hello="This is john";
+            }
+            console.log(hello);//The value of hello has been changed to this is john
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //let is blocked scoped variable i.e bounded by {}
+            let greeting = "Hello there";
+            if(true){
+                let greeting="Hi there";
+                console.log("this is greeting iniside condition",greeting);
+            }//The var problem is updated here so let can better choice than var
+            console.log(greeting);
+
+            //let can be updated but cant be redefined
+            // let greeting="Hello"; this generated error
+
+            greeting="This is updated hello";
+            console.log("the updated greeting",greeting);
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p class="introduction" >This is the first line that introduction</p>
+        <p class="introduction">This is the second line that contains the introduction</p>
+        <p id="use"></p>
+
+        <script>
+            const element=document.getElementsByClassName("introduction");
+            let elements=JSON.stringify(element);
+            console.log(typeof(element))
+            document.getElementById("use").innerHTML="The class name introduction index 0 contains="+element[0].innerHTML+"<hr/> And the second index of class name introduction contains==="+element[1].innerHTML;
+        </script>
+    </body>
+</html>

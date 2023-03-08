@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>This is the first p tag</p>
+        <p>This is the second p tag</p>
+        <p>This is the third p tag</p>
+
+        <h1>This is the first heading tag using query selector all</h1>
+        <h1>This is the second heading tag</h1>
+        <h1>This is the third heading tag</h1>
+        <p id="demo"></p>
+        <script>
+            const element=document.querySelector("p").style.color =" blue";
+            document.getElementById("demo").innerHTML=element;
+            const elements=document.querySelectorAll("h1");
+            let a=0;
+            for(x in elements){ 
+                elements[a].style.color="green";
+                a=a+1;
+            }
+        </script>
+    </body>
+</html>
