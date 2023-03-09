@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JS Array Method</h1>
+        <p id="join"></p>
+        <p id="push"></p>
+        <p id="pop"></p>
+        <p id="shift"></p>
+        <p id="unshift"></p>
+        <p id="access"></p>
+        <p id="length"></p>
+        <p id="merge"></p>
+        <p id="splice"></p>
+        <p id="slice"></p>
+        <p id="string"></p>
+        <script>
+            const alphabets=["A","B","C","D","E"];
+            document.getElementById("join").innerHTML="This is done using join function "+alphabets.join(",");
+            alphabets.push("F");
+            document.getElementById("push").innerHTML="After using push fucntion:"+ alphabets;
+            const data=alphabets.pop();
+            document.getElementById("pop").innerHTML="After using pop:"+ alphabets+" and the poped element is "+data;
+            document.getElementById("shift").innerHTML="This is done using shift and the shifted element:"+ alphabets.shift();
+            alphabets.unshift("AAAA");
+            document.getElementById("unshift").innerHTML="This is done using unshift:"+ alphabets;
+            document.getElementById("access").innerHTML="This is done using access:"+ alphabets[0];
+            document.getElementById("length").innerHTML="This is done using legnth and its length is:"+ alphabets.length;
+            const number=["1","2","3","4","5"];
+            const alphanumeric=alphabets.concat(number);
+            document.getElementById("merge").innerHTML="This is done using concat:"+ alphanumeric;
+            alphabets.splice(1,3,"x","y","z");
+            document.getElementById("splice").innerHTML="This is done using splice:"+ alphabets;
+            document.getElementById("slice").innerHTML="This is done using slice:"+ alphabets.slice(1);
+            document.getElementById("string").innerHTML="This is done using pop:"+ typeof(alphabets.toString());
+        </script>
+    </body>
+</html>

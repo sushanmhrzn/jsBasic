@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Foreach</h1>
+        <p id="foreach"></p>
+        <p id="map"></p>
+        <p id="filter"></p>
+        <p id="reduce"></p>
+        <p id="reduceRight"></p>
+        <p id="every"></p>
+        <p id="some"></p>
+        <p id="position"></p>
+        <p id="lastposition"></p>
+        <p id="find"></p>
+        <p id="sort"></p>
+        <p id="rsort"></p>
+        <script>
+            const numbers=[1,2,3,4,5];
+            let sum="";
+            numbers.forEach(myFunction);
+            document.getElementById("foreach").innerHTML="Example of foreach<br>"+sum;
+            function myFunction(value){
+                sum+=value+2+"<br/>";
+            }
+            numbers2=numbers.map(mapFunction);
+            document.getElementById("map").innerHTML="Example of map "+numbers2;
+            function mapFunction(item){
+                return item+10;
+            }
+            
+            lessthan14=numbers2.filter(filterFunction);
+            document.getElementById("filter").innerHTML="Example of filters "+lessthan14;
+            function filterFunction(value){
+                return value<14;
+            }
+            lessthan14=numbers2.filter(filterFunction);
+            document.getElementById("filter").innerHTML="Example of filters "+lessthan14;
+            function filterFunction(value){
+                return value<14;
+            }
+
+            sum=numbers.reduce(reduceFunction)
+            document.getElementById("reduce").innerHTML="Total sum:"+sum;
+            function reduceFunction(total,value){
+                return total+value;
+            }
+
+            //reduce follow left to right so for right to left we use reduceRight which start from last index 
+            sum1=numbers.reduceRight(reduceFunction)
+            document.getElementById("reduceRight").innerHTML="Total sum:"+sum1;
+            function reduceRightFunction(total,value){
+                return total+value;
+            }
+            
+
+            arrayOverZero=numbers.every(everyFunction);
+            document.getElementById("every").innerHTML="Array with all number greater than 0: "+arrayOverZero;
+            function everyFunction(value){
+                return value>0;
+            }
+
+            somearrayOverZero=numbers.some(someFunction);
+            document.getElementById("some").innerHTML="Array with some number greater than 0: "+somearrayOverZero;
+            function someFunction(value){
+                return value>0;
+            }
+
+
+            position=numbers.indexOf(2)+1;
+            document.getElementById("position").innerHTML="The number 1 is at position : "+position;
+    
+            numbers.push(5,2,4);
+            poisitionFromLast=numbers.lastIndexOf(4)+1;
+            document.getElementById("lastposition").innerHTML="The number 1 is at position : "+poisitionFromLast;
+            
+            number=numbers.find(findFunction);
+            document.getElementById("find").innerHTML="The first found number: "+number;
+            function findFunction(value){
+                if(value>4){
+                    return value;
+                }
+            }
+
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.sort();
+            document.getElementById("sort").innerHTML="Sorted elements: "+fruits;
+            fruits.reverse();
+            document.getElementById("rsort").innerHTML="Sorted element on reseversed: "+fruits;
+        </script>
+    </body>
+</html>
