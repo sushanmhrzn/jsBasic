@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Example of ES6</h1>
+    <h2>
+        Arrow Function
+    </h2>
+    <p id="arrowFunction"></p>
+    <h2>Spread operator</h2>
+    <p id="spread"></p>
+    <h2>Loop</h2>
+    <p id="loop"></p>
+    <h2>Map</h2>
+    <p id="map"></p>
+    <h2>Set</h2>
+    <p id="set"></p>
+    <h2>Class</h2>
+    <p id="class"></p>
+    <h2>Please wait me for 5 second</h2>
+    <p id="promise"></p>
+    <h2>Symbol</h2>
+    <p id="symbol"></p>
+    <h2>Default parameter</h2>
+    <p id="defaultparam"></p>
+    <h2>Using rest in function</h2>
+    <p id="rest"></p>
+    <h2>Include</h2>
+    <p id="include"></p>
+    <h2>Entries</h2>
+    <p id="entries"></p>
+    <!-- <h2>Using rest in function</h2>
+    <p id="rest"></p> -->
+    <script>
+        // var sum=function(x,y){
+        //     return x+y;
+        // } OR
+        const sum=(x,y)=>{
+            return x+y;
+        }
+        document.getElementById("arrowFunction").innerHTML =sum(5, 5);
+        
+        const fiveNumber=[1,2,3,4,5];
+        document.getElementById("spread").innerHTML =[...fiveNumber];
+        // document.getElementById("loop").innerHTML =[...fiveNumber];
+
+        let num="";
+        for(let x of fiveNumber){
+            num += x+" ";
+        }
+        document.getElementById("loop").innerHTML =num;
+
+        const cars=new Map([["BMW",10000],["Bugatti",20000],["Tata",1000]])
+        document.getElementById("map").innerHTML=cars.get("BMW");
+    
+        const numbers= new Set();
+        numbers.add(1);
+        numbers.add(2);
+        document.getElementById("set").innerHTML=numbers.size;
+
+
+        class Bird{
+            constructor(name,colour){
+                this.name=name;
+                this.colour=colour;
+            }
+        }
+        const myBird= new Bird("Sparrow","Brown");
+        document.getElementById("class").innerHTML="My bird name is "+myBird.name+" and my bird colour is:"+myBird.colour;
+
+        const myPromise=new Promise(function(myResolve,myReject){
+            setTimeout(function(){
+                myResolve("Hey! thank your for waiting");
+            },5000)
+        });
+        myPromise.then(function(value){
+            document.getElementById("promise").innerHTML=value;
+        })
+
+        const person={
+            firstName:"Baka",
+            age:50
+        };
+        let id=Symbol('id');
+        person[id]=2123;
+        document.getElementById("symbol").innerHTML=person[id];
+        
+        function sumOf(a,b=100){
+            return a+b;
+        }
+        document.getElementById("defaultparam").innerHTML=sumOf(10);
+        
+        function sumOf(...a){
+            const sum=a.reduce(myFunction);
+            function myFunction(total,value){
+                return total+value;
+            }
+            return sum;
+        }
+        document.getElementById("rest").innerHTML=sumOf(10,23,412,123,34);
+
+        const intro="Hello this is from Moon";
+        document.getElementById("include").innerHTML="The variable intro has hello: "+intro.includes("Hello");
+
+        
+        const bikes=["Duke","RC","NS"];
+        const keyValue=bikes.entries();
+
+        for(let x of keyValue){
+            document.getElementById("entries").innerHTML+= x+" ";
+        }
+    </script>
+</body>
+</html>
